@@ -1,0 +1,10 @@
+{{#if isUpdatingTodo}}
+    <p class="name">{{input type="text" value=todo.name}}</p>
+    <div class="actions"><a href="#" {{action "updateTodo"}}>Update Todo</a></div>
+{{else}}
+    <p class="name">{{todo.name}}</p>
+    <div class="actions">
+        <a href="#" {{action "editTodo" todo}}>Edit</a> |
+        <a href="#" {{action "deleteTodo" todo}}>Delete</a>
+    </div>
+{{/if}}

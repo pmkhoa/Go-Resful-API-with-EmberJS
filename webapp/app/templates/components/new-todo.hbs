@@ -1,0 +1,7 @@
+<form id="new-todo" {{action "saveTodo" on="submit"}}>
+    {{#if isEmptyTodoName}}
+        <p>Your todo is empty</p>
+    {{/if}}
+   <div class="input-todo">{{input type="text" value=todoName placeholder="Todo ..." autofocus=true autocomplete="off"}}</div>
+    <button type="submit" form="new-todo" value="Add Todo">Add Todo</button>
+</form>

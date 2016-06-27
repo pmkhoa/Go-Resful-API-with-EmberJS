@@ -1,0 +1,17 @@
+<div class="todo-app">
+    <div class="container">
+        <div class="todo-heading">
+            <h1>Todo App</h1>
+            <p>Yet another todo app, but built with Go &amp; Ember.</p>
+        </div>
+        <div class="todo-container">
+            {{new-todo addNewTodo="addNewTodo"}}
+            <ul class="todo-list">
+                {{#each todos as |todo|}}
+                    {{single-todo todo=todo deleteTodo="deleteTodo" addNewTodo="addNewTodo" updateTodo="updateTodo"}}
+                {{/each}}
+            </ul>
+            {{todo-count todos=todos}}
+        </div>
+    </div>
+</div>
